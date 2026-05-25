@@ -6,7 +6,8 @@ int main() {
     printf("1. Torre - Movimento em linha reta\n");
     printf("2. Bispo - Movimento diagonal\n");
     printf("3. Dama - Movimento livre\n");
-    printf("4. Sair\n");
+    printf("4. Cavalo - Movimento em L\n");
+    printf("5. Sair\n");
     printf("Opcao: ");
     scanf("%d", &opcao);
     switch(opcao) {
@@ -33,8 +34,19 @@ int main() {
         opcao++;
     } while (opcao <= 8);
     break;
-//sair do programa
+//movimento do cavalo
     case 4:
+    int movimentoCavalo = 1;
+    while (movimentoCavalo--)
+    {
+      for(int i = 0; i < 2; i++) {
+        printf("Cima\n", i);
+      }
+      printf("Direita\n");
+    }
+    break;
+//sair do programa
+    case 5:
     printf("Saindo do jogo...\n");
     break;
 //opcao invalida
